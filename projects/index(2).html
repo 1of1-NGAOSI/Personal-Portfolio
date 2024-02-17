@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Bootstrap Progress Bar</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h3>Progress Bar + Buttons with Event Listeners</h3>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+        </div>
+        <br>
+        <button class="btn btn-primary" onclick="setProgress(33)">Set to 33%</button>
+        <button class="btn btn-primary" onclick="setProgress(66)">Set to 66%</button>
+        <button class="btn btn-primary" onclick="setProgress(100)">Set to 100%</button>
+    </div>
+
+    <script>
+        function setProgress(percentage) {
+            const progressBar = document.querySelector(".progress-bar");
+            progressBar.style.width = percentage + "%";
+            progressBar.innerText = percentage + "%";
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
